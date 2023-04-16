@@ -3,7 +3,7 @@ package programmers;
 import java.util.Arrays;
 import java.util.HashMap;
 
-public class lessons42577 {
+public class lesson42577 {
     public boolean solution(String[] phone_book) {
         HashMap<String, Boolean> numberMap = new HashMap<>();
         Arrays.sort(phone_book, (String s1, String s2) -> s1.length() - s2.length());

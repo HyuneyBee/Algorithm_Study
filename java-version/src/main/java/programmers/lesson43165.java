@@ -1,6 +1,6 @@
 package programmers;
 
-public class lessons43165 {
+public class lesson43165 {
     private int[] numbersArray;
     private int targetValue;
     private int result = 0;
