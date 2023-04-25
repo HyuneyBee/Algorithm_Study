@@ -1,6 +1,6 @@
 package programmers;
 
-import java.util.HashMap;
+import java.util.*;
 
 public class lesson131127 {
 
@@ -14,6 +14,9 @@ public class lesson131127 {
 
         HashMap<String, Integer> hyunProductMap = new HashMap<>();
         HashMap<String, Integer> discountProductMap = new HashMap<>();
+
+        List<String> arr = new ArrayList<>(Arrays.asList("123","123","123"));
+        Stack<String> stack = new Stack<>();
 
         for(int i=0; i<length; i++){
             hyunProductMap.put(want[i], number[i]);
