@@ -5,17 +5,17 @@ public class lesson178870 {
         if(sequence[0] == k){
             return new int[]{0,0};
         }
-
         int[] answer = new int[2];
 
-
         int start = 0;
-        int last = 1;
-        int sum = sequence[0] + sequence[1];
+        int last = 0;
+        int sum = sequence[0];
+
+        int length = sequence.length;
 
         Integer size = Integer.MAX_VALUE;
 
-        while((last < sequence.length - 1) || sum > k){
+        while(true){
             if(sum == k){
                 int currentSize = last - start;
 
@@ -24,16 +24,19 @@ public class lesson178870 {
                     answer[1] = last;
                     size = currentSize;
                 }
+            }
+
+            if(start == length && last == length) break;
+
+            if(sum <= k && last < length){
                 last += 1;
-                sum += sequence[last];
-            } else if(sum > k){
-                sum -= sequence[start];
-                start += 1;
+                if(last < length) sum += sequence[last];
             } else {
-                last += 1;
-                sum += sequence[last];
+                if(start < length) sum -= sequence[start];
+                start += 1;
             }
         }
+
         return answer;
     }
 }
